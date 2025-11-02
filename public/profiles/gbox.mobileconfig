@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <dict>
+        <key>URL</key>
+        <string>http://192.168.0.200:3000/udid</string>
+        <key>DeviceAttributes</key>
+        <array><string>UDID</string></array>
+    </dict>
+    <key>PayloadDisplayName</key>
+    <string>GBox UDID</string>
+    <key>PayloadIdentifier</key>
+    <string>net.exchen.profile-service</string>
+    <key>PayloadUUID</key>
+    <string>8D0CAE86-1AB7-18B6-86AE-6898C080CB68</string>
+    <key>PayloadType</key>
+    <string>Profile Service</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadOrganization</key>
+    <string>gbox.run</string>
+</dict>
+</plist>

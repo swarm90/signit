@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url('images/gamepads.png') center center / cover no-repeat fixed;
+  background-color: #000; /* fallback if image doesn't load */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(213, 0, 249, 0.3),
+              0 0 40px rgba(156, 39, 176, 0.3);
+  border: 1px solid rgba(213, 0, 249, 0.4);
+  color: #fff;
+}
+.title {
+  font-size: 2em;
+  font-weight: 600;
+  color: #7a00b8;
+  margin-bottom: 15px;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  background: linear-gradient(135deg, #9c27b0, #d500f9);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  box-shadow: 0 0 10px #d500f9, 0 0 20px #9c27b0;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #d500f9, #9c27b0);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #d500f9, 0 0 40px #9c27b0;
+}
+
+
+input {
+  width: 90%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 2px solid #9c27b0;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #7b1fa2;
+}
+
+.get-udid {
+  display: block;
+  color: #7a00b8;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #9c27b0;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #7b1fa2;
+}
+
+#result {
+  margin-top: 15px;
+  font-weight: 600;
+}
+.disclaimer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px 5px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.links {
+  margin-top: 15px;
+}
+
+.get-udid, .telegram-link {
+  display: block;
+  color: #d18cff;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 8px;
+  transition: color 0.3s;
+}
+
+.get-udid:hover, .telegram-link:hover {
+  color: #fff;
+}

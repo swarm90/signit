@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Authorization</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Get Authorization</h1>
+  <p>Enter your UDID and code to continue.</p>
+  <input id="udid" placeholder="Enter your UDID"><br>
+  <input id="code" placeholder="Enter authorization code"><br>
+  <button onclick="verifyCode()">Start</button>
+
+  <p id="result"></p>
+
+  <script>
+    async function verifyCode() {
+      const code = document.getElementById("code").value;
+      const udid = document.getElementById("udid").value;
+      const res = await fetch("/verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ code, udid })
+      });
+      const data = await res.json();
+      if (data.success) {
+        document.getElementById("result").innerHTML = "✅ Code verified! Proceed to install.";
+      } else {
+        document.getElementById("result").innerHTML = "❌ Invalid code.";
+      }
+    }
+  </script>
+</body>
+</html>

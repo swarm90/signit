@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud CODM - Sign.IT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+// Auto-fill UDID from URL
+const params = new URLSearchParams(location.search);
+const autoUdid = params.get('udid');
+if (autoUdid) {
+  document.getElementById('udid').value = autoUdid;
+  document.getElementById('result').innerHTML = '<span style="color:green">UDID auto-filled! ✅</span>';
+}
+</script>
+<body class="flower-bg">
+  <button class="back-btn" onclick="window.location.href='index.html'">← Back</button>
+
+  <div class="container">
+    <h2>Cloud CODM</h2>
+   <a href="/profiles/gbox.mobileconfig" class="get-udid" download>Get UDID (GBox Method)</a>
+    <input type="text" id="udid" placeholder="Enter UDID">
+    <input type="text" id="auth-code" placeholder="Enter Authorization Code">
+    <button class="btn" onclick="checkAuth('cloud')">Verify & Install</button>
+    <p id="result"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
