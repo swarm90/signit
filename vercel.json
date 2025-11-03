@@ -1,5 +1,21 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/signit.mobileconfig",
+      "dest": "/public/signit.mobileconfig",
+      "headers": {
+        "Content-Type": "application/x-apple-aspen-config",
+        "Cache-Control": "no-cache"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
