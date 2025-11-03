@@ -1,17 +1,28 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/**/*.js", "use": "@vercel/node" }
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
     {
-      "src": "/signit.mobileconfig",
-      "dest": "/public/signit.mobileconfig",
-      "headers": {
-        "Content-Type": "application/x-apple-aspen-config",
-        "Cache-Control": "no-cache"
-      }
+      "src": "/udid",
+      "methods": ["POST"],
+      "dest": "index.js"
     },
-    { "src": "/api/(.*)", "dest": "/api/$1" }
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
   ]
 }
