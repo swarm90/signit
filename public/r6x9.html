@@ -20,7 +20,7 @@ if (autoUdid) {
 
   <div class="container">
     <h2>R6X9 CODM</h2>
-    <a href="/profiles/gbox.mobileconfig" class="get-udid" download>Get UDID</a>
+    <a href="/profiles/signit.mobileconfig" class="get-udid" download>Get UDID</a>
     <input type="text" id="udid" placeholder="Enter UDID">
     <input type="text" id="auth-code" placeholder="Enter Authorization Code">
     <button class="btn" onclick="checkAuth('r6x9')">Verify & Install</button>
@@ -30,3 +30,10 @@ if (autoUdid) {
   <script src="script.js"></script>
 </body>
 </html>
+<script>
+  if (location.hash === '#auto') {
+    const udid = new URLSearchParams(location.search).get('udid');
+    document.getElementById('udid').value = udid;
+    document.getElementById('result').innerHTML = '<b style="color:lime">UDID AUTO-FILLED! ✅</b>';
+  }
+</script>
