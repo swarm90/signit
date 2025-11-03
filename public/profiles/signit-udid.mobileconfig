@@ -1,28 +1,90 @@
+0‚’	*†H†÷
+ ‚ƒ0‚10
+	`†He 0‚!	*†H†÷
+ ‚‚<?xml version="1.0" encoding="UTF-8"?>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>PayloadContent</key>
-  <dict>
-    <key>URL</key>
-    <string>https://YOUR-VERCEL-URL.vercel.app/server/profile-service.js</string>
-    <key>DeviceAttributes</key>
-    <array>
-      <string>UDID</string>
-      <string>DEVICE_NAME</string>
-    </array>
-  </dict>
-  <key>PayloadDisplayName</key>
-  <string>Sign.IT – Get UDID</string>
-  <key>PayloadIdentifier</key>
-  <string>com.signit.udid</string>
-  <key>PayloadType</key>
-  <string>Profile Service</string>
-  <key>PayloadUUID</key>
-  <string>4A7B8C9D-2E3F-4A5B-9C1D-8E7F6A5B4C3D</string>
-  <key>PayloadVersion</key>
-  <integer>1</integer>
-  <key>PayloadDescription</key>
-  <string>Install once to auto-fill your UDID</string>
+    <key>PayloadContent</key>
+    <dict>
+        <key>URL</key>
+        <string>https://signit-svtj.vercel.app/api/receive-udid</string>
+        <key>DeviceAttributes</key>
+        <array>
+            <string>UDID</string>
+            <string>IMEI</string>
+            <string>ICCID</string>
+            <string>VERSION</string>
+            <string>PRODUCT</string>
+        </array>
+    </dict>
+    <key>PayloadOrganization</key>
+    <string>Sign.it</string>
+    <key>PayloadDisplayName</key>
+    <string>Sign.it – Get UDID</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadUUID</key>
+    <string>7F82C1B4-AB47-4A13-A9C6-EB4DF741BA92</string>
+    <key>PayloadIdentifier</key>
+    <string>com.signit.udid</string>
+    <key>PayloadDescription</key>
+    <string>This profile is used only to collect the UDID of your iOS device securely for Sign.it verification.</string>
+    <key>PayloadType</key>
+    <string>Profile Service</string>
 </dict>
 </plist>
+ ‚
+©0‚ª0‚’ 
+àÿµîbËaŸ`Œœí^Ó0
+	*†H†÷
+ 0a10	UUS10U
+DigiCert Inc10Uwww.digicert.com1 0UDigiCert Global Root G20
+171127124640Z
+271127124640Z0n10	UUS10U
+DigiCert Inc10Uwww.digicert.com1-0+U$Encryption Everywhere DV TLS CA - G20‚"0
+	*†H†÷
+ ‚ 0‚
+‚ ïŽ¢þzû¦H©Äy"Z¯>u*Ý¡u´Ây†Lœî‹šÞTtwÁ ½J/—Œ­vr6`Äæì/¤`Öxï6'‚nœÝ	dI'¯l› ÞÇ:òvÏC;Š§’\òúkÊ¦¶Íü¥ —¢³ÑúÇ!B+
+³’CS#pStw»[­Ç–Öó€½œ°•Pzˆdžü¦D!œ:rÊxW»šêg5‚Q:-¢]~á{ö -´Ç7Ø+úPìbÅ÷e_‹Î’ç’Qj÷ÅÎF$ ’õëÏ…¯2½¿–è˜¬•’KørÅ¶'hÆb;BmÙÈ…zénwÜ;)…&L÷ËAžk’TÆÈ•û £‚O0‚K0Uxß‘_îÞ¬öÅuëÕLUSï$J¶0U#0€N"T •æãnæúú¹í90Uÿ†0U%0++0Uÿ0ÿ 04+(0&0$+0†http://ocsp.digicert.com0BU;0907 5 3†1http://crl3.digicert.com/DigiCertGlobalRootG2.crl0LU E0C07	`†H†ýl0*0(+https://www.digicert.com/CPS0g0
+	*†H†÷
+ ‚  5x"ÊjBíUÅF0H'ÒÉ/K<ek¦ñO?Õ3‘Ÿàoœg=H‹ý]³
+¨«®¾AÛNzÁ¿"÷ÆÙ÷H}ú¯×åã28=ùÆhC)vt¬Â!ñÓ¯ôø“æÿ]¡új­Ý•ÞÄÐ‰¨§±v v!a’)È„öœZI?ŠÂˆ*5}ï„·ÿð²Ÿ1žÁ
+üò 9ÜšðaŸhôßé•ý3Q«!#|u“µÓBlDj4ZþYxÔÈR¬i6Ÿh\.·ÙI¼§/éKÄO±ùl’9€'Y}}ÉÛªE?¥þ®1	§~]	B2MJ0‚÷0‚ß ‹¹ôM=Vn¶~ó€ý¾
+ü0
+	*†H†÷
+ 0n10	UUS10U
+DigiCert Inc10Uwww.digicert.com1-0+U$Encryption Everywhere DV TLS CA - G20
+250826000000Z
+260825235959Z010Ugbox.run0‚"0
+	*†H†÷
+ ‚ 0‚
+‚ ®±LQ‹ñýÂÆšW-§t¦–•(ÖÅÉ²¸äZ7‚\ž6£ Ns¿êJ3Ä˜J|ÏÂ®fhO–+lŒZDŽ›ÒjÚB!qÀ€¦ú4.)æ‘·Ãv‚¡+Éx^c:úI.†
+Ê—*¥ûN<ÁÀŽ7òú^ÁÜ©` Ç©ÜwcÞ”âîò%kí`¬’7w5ãðì¤õÝ—PYQ×K	UÅ­ßõkµÒJºYÉOýÎ¾ËZ·ƒ÷Ëù 3‘	ãys<Ö²¿8«U–šãã;aú˜‘•Õ÷O,J[ÝŸåÌWÁ‡3ÜŽ©|õjPå5Á£	Ö¯wx£¶Yîlc £‚ê0‚æ0U#0€xß‘_îÞ¬öÅuëÕLUSï$J¶0Uþ•Ê,’IvÑêKwnö®ÀV¶0!U0‚gbox.run‚www.gbox.run0>U 70503g0)0'+http://www.digicert.com/CPS0Uÿ 0U%0++0€+t0r0$+0†http://ocsp.digicert.com0J+0†>http://cacerts.digicert.com/EncryptionEverywhereDVTLSCA-G2.crt0Uÿ0 0‚
++Öy‚o‚ki w ×m}Ñ§õwÂÇé_× ¿ù‚É3ZeáÐ³sÀÈÅiw  ˜ãÜv   H0F! ávoŸFVªrè¸Õ£‰Ÿû#Õë^¢íS@
+ é! ÀËM˜­Ú}Ú»ñzÖjMdÈ’È«‹^ÈˆBû v Â1~WE£Eî8Þ²AëÇÂ!Z"¿Õµ­všÙRÍ  ˜ãÜvJ   G0E! ÇeÎÿÂAýÕqÁx{]9ã“R¨- µÝ<fc&ÓÈD °ªìAÉr˜tÉêM¨M“
+j§ÿò}`h·$·õûÉ¤È v ”NC‡úìÁïó$&¨eÇÓ_8?rg}U7.Ø  ˜ãÜv]   G0E! ˜˜ÔÞ„œF•„_ªV±ÅªÇÇˆ“$¡·Šâ-| Zøãéå
+ˆ/[oP'âÊWñÿ	A«ùJg×eâµ0
+	*†H†÷
+ ‚ ƒÑÈùö4#{]ƒÐ,ª#Wô‘ùÐ»ßæ8<˜ž‡‡ïš"köA‰¹Å]
+Z{N7ÜÊ{ÝI¾ t;ïà"}ï‰p¹gUºëÆ&øHÄ‘)VOTïÞWðÞ–+"Žƒ…;x¯‘IÑßLWÖ×˜ñcãÉÆ§¸{¢x0©Ç)¼ÐÇ#»¸\¡¸¸6Oz ~|¦Å·™8Z¤›é]Õ`ÆµÉ]Z_wp™õgÑ„X€¦ faR<{ìŠ}ŠK»ˆmû|ø[È7‡SÙÏI›´S¡PóÜ¬Ñ[ÆÌ…Ïå#S>6Ð»ºoûâÐZT	ˆ’ÊYxJàø«C%wŽ6Å&í'1‚•0‚‘0‚0n10	UUS10U
+DigiCert Inc10Uwww.digicert.com1-0+U$Encryption Everywhere DV TLS CA - G2‹¹ôM=Vn¶~ó€ý¾
+ü0
+	`†He  ä0	*†H†÷
+	1	*†H†÷
+0	*†H†÷
+	1
+250826043229Z0/	*†H†÷
+	1" Êy8bb)Ãºêm?ißa,ËñëcÖX¸'ì’B*¥N0y	*†H†÷
+	1l0j0	`†He*0	`†He0	`†He0
+*†H†÷
+0*†H†÷
+ €0
+*†H†÷
+@0+0
+*†H†÷
+(0
+	*†H†÷
+ ‚ $ØÛo—†ù‡â&R4šÎÙ“f&ÝÓíÁÆu‡êó	#y{2º
+¤«:{Œ<Ê¬\ˆè\ô‚³L‹X…È§©§ºV±Å–õÔ-­Ý³ÇâÄj”ûbfƒS~ûÙ’õ­¢yð–ùíÆM`–:C)y5¿7IX$Ì¥¼mñçEï;|×±`ëeËS†ÔF¼W´WTöûÈÐX¨À˜Ö^<¿ð¿õI}Ð$ño&?ÏG”ôŠÓ÷µÅLÏñõü>²€¨&øKø+ˆÍr[ÿ3…Áj‹´¹—í` ¤ÈÇ— ›DUíÉŒ¡ýZµŸEJ~þ'5÷Æ+S¥9Ë(Yò~
