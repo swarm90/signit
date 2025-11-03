@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/udid", "destination": "/server/app.js" }
+  ]
+}
