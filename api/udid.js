@@ -1,35 +1,53 @@
-// api/udid.js - Vercel (Node)
+// api/udid.js - Vercel serverless function
 import rawBody from 'raw-body';
 import plist from 'plist';
 
 export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).send('Method Not Allowed');
+  }
+
   try {
     const buf = await rawBody(req);
     const text = buf.toString('utf8');
-    // Device sends a plist in the request body
     let obj;
     try {
       obj = plist.parse(text);
     } catch (e) {
-      // not a plist? return 200 anyway
       console.log('Failed to parse plist:', e);
       obj = { raw: text };
     }
     console.log('Profile service payload received:', obj);
 
-    // Example: get UDID
-    let udid = null;
-    if (obj && obj.UDID) udid = obj.UDID;
-    else if (obj && obj.Payload) udid = obj.Payload && obj.Payload.UDID;
+    // Extract UDID (adjust if your plist structure differs; standard is obj.UDID)
+    let udid = obj?.UDID || null;
 
-    // Save UDID somewhere (DB, file, etc)
-    // For now just log and respond.
     console.log('Device UDID:', udid);
 
-    // Respond 200 OK to complete the handshake
-    res.status(200).send('OK');
+    // Respond with empty plist to satisfy Apple/device
+    res.set('Content-Type', 'application/x-apple-aspen-config');
+    res.write(`<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict/></plist>`);
+
+    // Delayed script to redirect browser back with UDID (hack to bypass device handler)
+    setTimeout(() => {
+      const referer = req.headers.referer || '';
+      const page = referer.includes('cloud') ? 'cloud' : 'r6x9';
+      const host = req.headers.host;
+      const udidParam = udid || 'unknown';
+      const url = `https://${host}/${page}.html?udid=${udidParam}`;
+      res.end(`<script>window.location="${url}"</script>`);
+    }, 500);
   } catch (err) {
     console.error(err);
     res.status(500).send('server error');
   }
 }
+
+// Disable Vercel's built-in body parser to handle raw buffer
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
