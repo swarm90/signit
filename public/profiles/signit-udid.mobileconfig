@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>PayloadContent</key>
+  <dict>
+    <key>URL</key>
+    <string>https://YOUR-VERCEL-URL.vercel.app/server/profile-service.js</string>
+    <key>DeviceAttributes</key>
+    <array>
+      <string>UDID</string>
+      <string>DEVICE_NAME</string>
+    </array>
+  </dict>
+  <key>PayloadDisplayName</key>
+  <string>Sign.IT – Get UDID</string>
+  <key>PayloadIdentifier</key>
+  <string>com.signit.udid</string>
+  <key>PayloadType</key>
+  <string>Profile Service</string>
+  <key>PayloadUUID</key>
+  <string>4A7B8C9D-2E3F-4A5B-9C1D-8E7F6A5B4C3D</string>
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+  <key>PayloadDescription</key>
+  <string>Install once to auto-fill your UDID</string>
+</dict>
+</plist>
