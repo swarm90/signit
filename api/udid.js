@@ -1,17 +1,35 @@
-export default function (req, res) {
-  if (req.method !== 'POST') return res.status(405).end();
+// api/udid.js - Vercel (Node)
+import rawBody from 'raw-body';
+import plist from 'plist';
 
-  let body = '';
-  req.on('data', c => body += c.toString());
-  req.on('end', () => {
-    // SIMPLE REGEX — works 100% on every iPhone
-    const udid = body.match(/UDID<\/key>\s*<string>([A-F0-9]{40})/i)?.[1] || 'ERROR';
+export default async function handler(req, res) {
+  try {
+    const buf = await rawBody(req);
+    const text = buf.toString('utf8');
+    // Device sends a plist in the request body
+    let obj;
+    try {
+      obj = plist.parse(text);
+    } catch (e) {
+      // not a plist? return 200 anyway
+      console.log('Failed to parse plist:', e);
+      obj = { raw: text };
+    }
+    console.log('Profile service payload received:', obj);
 
-    // Apple go happy → install finish
-    res.setHeader('Content-Type', 'application/x-apple-aspen-config');
-    res.send(`<?xml version="1.0"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict/></plist>`);
+    // Example: get UDID
+    let udid = null;
+    if (obj && obj.UDID) udid = obj.UDID;
+    else if (obj && obj.Payload) udid = obj.Payload && obj.Payload.UDID;
 
-    // MAGIC: Auto-open page with UDID
-    setTimeout(() => res.end(`<script>top.location="/cloud.html?udid=${udid}#auto"</script>`), 300);
-  });
+    // Save UDID somewhere (DB, file, etc)
+    // For now just log and respond.
+    console.log('Device UDID:', udid);
+
+    // Respond 200 OK to complete the handshake
+    res.status(200).send('OK');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('server error');
+  }
 }

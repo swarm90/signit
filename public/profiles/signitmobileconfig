@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>PayloadContent</key>
-  <dict>
-    <key>URL</key>
-    <string>https://signit-svtj-nxmqt230i-swarm90s-projects.vercel.app/api/udid</string>
-    <key>DeviceAttributes</key>
-    <array><string>UDID</string></array>
-  </dict>
-  <key>PayloadDisplayName</key><string>Sign.IT UDID</string>
-  <key>PayloadIdentifier</key><string>com.signit.udid</string>
-  <key>PayloadUUID</key><string>11111111-2222-3333-4444-555555555555</string>
-  <key>PayloadType</key><string>Profile Service</string>
-  <key>PayloadVersion</key><integer>1</integer>
-  <key>PayloadOrganization</key><string>Sign.IT</string>
+    <key>PayloadContent</key>
+    <dict>
+        <key>URL</key>
+        <string>https://yourdomain.com/udid</string>
+        <key>DeviceAttributes</key>
+        <array>
+            <string>UDID</string>
+            <string>IMEI</string>
+            <string>VERSION</string>
+            <string>PRODUCT</string>
+        </array>
+    </dict>
+    <key>PayloadDisplayName</key>
+    <string>Sign.IT UDID</string>
+    <key>PayloadIdentifier</key>
+    <string>com.signit.udid</string>
+    <key>PayloadType</key>
+    <string>Profile Service</string>
+    <key>PayloadUUID</key>
+    <string>7B8C9D2E-3F4A-5B9C-1D8E-7F6A5B4C3D2E</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
 </dict>
 </plist>
