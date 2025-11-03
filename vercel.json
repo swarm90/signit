@@ -1,5 +1,17 @@
 {
-  "rewrites": [
-    { "source": "/udid", "destination": "/server/app.js" }
+  "version": 2,
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    {
+      "src": "/signit.mobileconfig",
+      "dest": "/public/signit.mobileconfig",
+      "headers": {
+        "Content-Type": "application/x-apple-aspen-config",
+        "Cache-Control": "no-cache"
+      }
+    },
+    { "src": "/api/(.*)", "dest": "/api/$1" }
   ]
 }
