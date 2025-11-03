@@ -13,6 +13,10 @@
         "Cache-Control": "no-cache"
       }
     },
+     {
+      "src": "/Telegram.html",
+      "dest": "/public/Telegram.html"
+    },
     {
       "src": "/(.*\\.(html|css|js|png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|ttf|eot|json))",
       "dest": "/public/$1"
